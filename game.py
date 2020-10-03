@@ -4,7 +4,7 @@ from turtle import *
 bgcolor("Gray")
 # ----------- #
 
-''' Spieler 1 Settings '''
+''' Spieler Settings '''
 Spieler1 = Turtle()
 Spieler1.color('red','green')
 
@@ -38,9 +38,9 @@ def Look_Right():
 
 def Go_und_position_speichern():
     _forward = 30
-    for i in range(_forward*2):
+    for i in range(_forward):
         Spieler1.POSITON_ON_SCREEN.append(Spieler1.position())
-        Spieler1.forward(.5)
+        Spieler1.forward(1)
         if Spieler1.position() in Spieler1.POSITON_ON_SCREEN:
             print (Spieler1.name,'is Crach')
 
@@ -64,6 +64,5 @@ Spieler2.setpos(-100,0)
 Spieler2.pendown()
 Spieler2.left(90)
 
-Spieler1.speed(0.01)
 listen()
 done()
